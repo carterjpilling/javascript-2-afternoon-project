@@ -210,8 +210,8 @@ each(names, function (item, indice) {
 // }
 function getUserById(arr, id, callback){
   for(let i = 0; i < arr.length; i++){
-    if(users[i].id === id){
-      callback(users[i])
+    if(arr[i].id === id){
+      callback(arr[i])
     }
   }
 }

@@ -9,7 +9,7 @@
 ////////// PROBLEM 1 //////////
 
 // Do not edit the code below.
-var arr = [10,20,30];
+var arr = [10, 20, 30];
 // Do not edit the code above.
 
 /*
@@ -18,7 +18,7 @@ var arr = [10,20,30];
 */
 
 //Code Here
-function first(arr){
+function first(arr) {
   return arr[0]
 }
 
@@ -26,7 +26,7 @@ function first(arr){
 ////////// PROBLEM 2 //////////
 
 // Do not edit the code below.
-var arr = [40,50,60];
+var arr = [40, 50, 60];
 // Do not edit the code above.
 
 /*
@@ -35,8 +35,8 @@ var arr = [40,50,60];
 */
 
 //Code Here
-function last(arr){
-  return arr[arr.length-1]
+function last(arr) {
+  return arr[arr.length - 1]
 }
 
 
@@ -52,8 +52,8 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 */
 
 //Code Here
-function looper(family){
-  for(let i=0; i <family.length;i++){
+function looper(family) {
+  for (let i = 0; i < family.length; i++) {
     alert(family[i])
   }
 }
@@ -71,8 +71,8 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
-function reversedLooper (letters){
-  for(let j = letters.length - 1; j >= 0; j--){
+function reversedLooper(letters) {
+  for (let j = letters.length - 1; j >= 0; j--) {
     alert(letters[j])
   }
 }
@@ -81,7 +81,7 @@ function reversedLooper (letters){
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var nums = [1,2,3,6,22,98,45,23,22,12];
+var nums = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
 // Do not edit the code above.
 
 /*
@@ -91,14 +91,14 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
 //Code Here
 
-function evenFinder(nums){
+function evenFinder(nums) {
   let evenArray = []
-  for(let i = 0; i < nums.length; i++){
-  if(nums[i] % 2 === 0)
-    evenArray.push(nums[i])
-    }
-  return evenArray
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0)
+      evenArray.push(nums[i])
   }
+  return evenArray
+}
 
 
 
@@ -116,7 +116,7 @@ function evenFinder(nums){
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
-var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
+var numbersArray = [1, 2, 34, 54, 55, 34, 32, 11, 19, 17, 54, 66, 13];
 // Do not edit the code above.
 
 /*
@@ -132,7 +132,7 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 ////////// PROBLEM 7 //////////
 
 // Do not edit the code below.
-var getRandomArbitrary = function() {
+var getRandomArbitrary = function () {
   return Math.floor(Math.random() * 30);
 };
 // Do not edit the code above.
@@ -177,8 +177,55 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+// function removeItem(list,item){}
+//   if(list && item){
+//     if(list.includes(item)){
+//       let index = null
+//       for (let i = 0; i < list.length; i++){
+//         if(list[i]) === item){
+//           index = i
+//           break;
+//         }
+//       }
+//       list.splice(index, 1)
+//       return list
+//     } else{
+//       return list
+//     }
+//   } else{
+//     return[]
+//   }
 
+// function addItem(list, item){}
 
+function removeItem(list, item) {
+  if (list && item) {
+    if (list.includes(item)) {
+      let index = null
+      for (let i = 0; i < list.length; i++) {
+        if (list[i] === item) {
+          index = i
+          break;
+        }
+      }
+      list.splice(index, 1)
+      return list
+    } else {
+      return list
+    }
+  } else {
+    return []
+  }
+}
+
+function addItem(list, item) {
+  if (list && item) {
+    list.push(item)
+    return list
+  } else {
+    return []
+  }
+}
 
 ////////// PROBLEM 9 //////////
 
@@ -187,7 +234,15 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
 //Code Here
+function maker() {
+  let array = [];
+  for (let i = 1; i <= 215; i++) {
+    numbers.push(i)
+  }
 
+
+  return array;
+}
 
 
 ////////// PROBLEM 10 //////////
@@ -201,7 +256,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Return a new array after adding ten to each item in numbers. 
   Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
 */
-  
+
 //Code Here
 
 
@@ -213,10 +268,10 @@ var num1 = Math.floor(Math.random() * 30);
 var num2 = Math.floor(Math.random() * 30);
 var arr1 = [];
 var arr2 = [];
-for(var i = 0; i < num1; i++){
+for (var i = 0; i < num1; i++) {
   arr1.push(i);
 }
-for(var i = 0; i < num2; i++){
+for (var i = 0; i < num2; i++) {
   arr2.push(i);
 }
 // Do not edit the code above.
@@ -228,7 +283,13 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
-
+function longer(arr1, arr2){
+  if(arr1.length > arr2.length){
+    return arr1
+  }else{
+    return arr2
+  }
+}
 
 
 /*
@@ -240,8 +301,27 @@ for(var i = 0; i < num2; i++){
 */
 
 //Code Here
+function both (arr1, arr2){
+  let newArray = []
+  for (let i = 0; i < arr1.length; i++){
+    for (let j = 0; j <arr2.length;i++){
+      if(arr1[i]) === arr2[j]){
+        newArray.push(i)
+      }
+    }
+
+  }
 
 
+// function uniq(arr, callback) {
+//   let dupArray = []
+//   arr.forEach((element) => {
+//     if (!dupArray.includes(element)) {
+//       dupArray.push(element)
+//     }
+//   })
+//   callback(dupArray);
+// }
 
 ////////// PROBLEM 12 //////////
 
@@ -249,27 +329,27 @@ for(var i = 0; i < num2; i++){
 var devMountainEmployees = [];
 
 var joe = {
-    name: 'Joe',
-    position: 'Instructor',
-    spiritAnimal: 'Honey Badger'
+  name: 'Joe',
+  position: 'Instructor',
+  spiritAnimal: 'Honey Badger'
 };
 
 var cahlan = {
-    name: 'Cahlan',
-    position: 'CEO',
-    spiritAnimal: 'butterfly'
+  name: 'Cahlan',
+  position: 'CEO',
+  spiritAnimal: 'butterfly'
 };
 
 var ryan = {
-    name: 'Ryan',
-    position: 'Marketing',
-    spiritAnimal: 'fox'
+  name: 'Ryan',
+  position: 'Marketing',
+  spiritAnimal: 'fox'
 };
 
 var colt = {
-    name: 'Colt',
-    position: 'Everything really',
-    spiritAnimal: 'Young Male Horse'
+  name: 'Colt',
+  position: 'Everything really',
+  spiritAnimal: 'Young Male Horse'
 };
 // Do not edit the code above.
 
@@ -315,10 +395,10 @@ var colt = {
 
 // Do not edit the code below.
 var user1 = {
-    name: 'Mark McIver',
-    email: 'mark.mciver@devmounta.in',
-    password: 'hunter2',
-    username: 'ihazcode'
+  name: 'Mark McIver',
+  email: 'mark.mciver@devmounta.in',
+  password: 'hunter2',
+  username: 'ihazcode'
 };
 // Do not edit the code above.
 
@@ -327,7 +407,7 @@ var user1 = {
 
 
 /*
-  Now you have a very common data structure. 
+  Now you have a very common data structure.
   Twitter is a good use case.
   It's easy to imagine that your followers list on Twitter is an array full of objects and those objects contain properties about the specific person you follow.
 
